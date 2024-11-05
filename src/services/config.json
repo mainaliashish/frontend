@@ -1,0 +1,9 @@
+{
+  "api": {
+    "awsBase": "https://0ouuos6apc.execute-api.us-east-1.amazonaws.com/",
+    "awsStage": "beta/",
+    "domainBase": "",
+    "webDomain": "",
+    "s3base": ""
+  }
+}
