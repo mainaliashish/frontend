@@ -1,8 +1,22 @@
+import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
+import AppRoute from "./router/AppRoute";
+import { ReactQueryDevtools } from "@tanstack/react-query-devtools";
+import ToastMessage from "./ui/ToastMessage";
+const queryClient = new QueryClient({
+  defaultOptions: {
+    queries: {
+      staleTime: 60 * 1000,
+    },
+  },
+});
+
 function App() {
   return (
-    <>
-      <h2 className="text-red-300">Hello World</h2>
-    </>
+    <QueryClientProvider client={queryClient}>
+      <ReactQueryDevtools initialIsOpen={false} />
+      <AppRoute />
+      <ToastMessage />
+    </QueryClientProvider>
   );
 }
 
