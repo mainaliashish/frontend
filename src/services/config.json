@@ -1,7 +1,7 @@
 {
   "api": {
-    "awsBase": "https://0ouuos6apc.execute-api.us-east-1.amazonaws.com/",
-    "awsStage": "beta/",
+    "awsBase": "https://qyywz1gpta.execute-api.us-east-1.amazonaws.com/",
+    "awsStage": "alpha/",
     "domainBase": "",
     "webDomain": "",
     "s3base": ""
