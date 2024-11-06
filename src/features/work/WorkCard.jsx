@@ -45,7 +45,7 @@ const WorkCard = ({ item }) => {
         </p>
       )}
       {description && (
-        <p className="text-stone-700 mt-2 text-justify">
+        <p className="text-stone-700 mt-2 text-justify tracking-wide leading-5 text-base">
           <span className="font-semibold">Description :</span> {description}
         </p>
       )}

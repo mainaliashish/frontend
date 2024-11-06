@@ -5,6 +5,7 @@ import Contact from "../pages/Contact";
 import Skill from "../pages/Skill";
 import Projects from "../pages/Projects";
 import AppLayout from "../ui/AppLayout";
+import PageNotFound from "../pages/PageNotFound";
 
 const AppRoute = () => {
   return (
@@ -17,6 +18,7 @@ const AppRoute = () => {
           <Route path="contact" element={<Contact />} />
           <Route path="skills" element={<Skill />} />
           <Route path="projects" element={<Projects />} />
+          <Route path="*" element={<PageNotFound />} />
         </Route>
       </Routes>
     </BrowserRouter>

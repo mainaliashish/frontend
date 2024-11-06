@@ -29,11 +29,14 @@ const EducationCard = ({ item }) => {
       </p>
       {coreModules && (
         <p className="text-stone-700 mt-2 text-justify">
-          <span className="font-semibold">Core Modules :</span> {coreModules}
+          <span className="font-semibold tracking-wide leading-5">
+            Core Modules :
+          </span>{" "}
+          {coreModules}
         </p>
       )}
       {description && (
-        <p className="text-stone-700 mt-2 text-justify">
+        <p className="text-stone-700 mt-2 text-justify tracking-wide leading-5 text-base">
           <span className="font-semibold">Description :</span> {description}
         </p>
       )}

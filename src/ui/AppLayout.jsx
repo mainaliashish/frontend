@@ -7,7 +7,7 @@ const AppLayout = () => {
   return (
     <div className="grid h-screen grid-rows-[auto_1fr_auto]">
       <AppHeader />
-      <main className="m-1 p-2">
+      <main className="m-1 p-2 mb-5">
         <Outlet />
       </main>
       <AppFooter />

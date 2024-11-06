@@ -6,7 +6,7 @@ const ProjectItem = ({ item }) => {
   const { title, description, languages, githubUrl } = item;
   return (
     <ul>
-      <li className="animate-fadeIn border-b border-gray-400 last:border-none mb-4 hover:bg-stone-200 p-4 m-2">
+      <li className="animate-fadeIn mb-4 hover:bg-stone-200 p-4 m-2">
         <div className="flex justify-between">
           <h3 className="text-xl font-semibold text-gray-600 flex text-center items-center">
             <a
