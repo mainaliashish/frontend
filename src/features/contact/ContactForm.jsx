@@ -21,7 +21,7 @@ const ContactForm = () => {
     <div className="flex items-center justify-center mt-5">
       <form
         onSubmit={handleSubmit(onSubmit)}
-        className="p-8 rounded-lg shadow-lg w-full bg-stone-100 mt-8"
+        className="p-8 rounded-lg shadow-lg w-full bg-stone-100 mt-8 mx-2"
       >
         <div className="mb-4">
           <label
