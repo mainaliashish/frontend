@@ -10,6 +10,6 @@ export async function getProjectDetails(userId) {
     return data.results;
   } catch (error) {
     console.error("Failed to fetch project data:", error);
-    return {};
+    throw new Error("Something went wrong. Please try again later.");
   }
 }

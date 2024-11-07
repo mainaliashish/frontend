@@ -9,7 +9,7 @@ export async function getBasicDetails(userId) {
     const data = await response.json();
     return data.results.at(0);
   } catch (error) {
-    console.error("Failed to fetch basic info data:", error);
-    return {};
+    console.log(error?.message);
+    throw new Error("Something went wrong. Please try again later.");
   }
 }

@@ -10,28 +10,40 @@ import { SlSocialSkype } from "react-icons/sl";
 import SocialLink from "../../ui/SocialLink";
 
 const HomeCard = () => {
-  const { isLoading, profile } = useBasicProfile();
+  const { isLoading, profile, error } = useBasicProfile();
   if (isLoading) return <Spinner />;
   return (
     <>
       <div className="animate-fadeIn">
         <div className="flex bg-stone-100 justify-between items-center p-4 border border-r-2 border-stone-300 shadow-md">
-          <div className="">
-            <p className="font-semibold p-2">Name: {profile?.fullName}</p>
-            <p className="font-semibold p-2">Email: {profile?.email}</p>
-            <p className="font-semibold p-2">
-              Contact: {profile?.phoneNumber.slice(0, -5) + "XXXXX"}
-            </p>
-            <p className="font-semibold p-2">Post code: {profile?.postCode}</p>
-            <p className="font-semibold p-2">Address: {profile?.address}</p>
-          </div>
-          <div className="self-start">
-            <img
-              src={profile?.avatarUrl}
-              alt={profile?.fullName}
-              className="h-24 rounded-full opacity-80 drop-shadow-xl"
-            />
-          </div>
+          {!error ? (
+            <>
+              <div className="">
+                <p className="font-semibold p-2">Name: {profile?.fullName}</p>
+                <p className="font-semibold p-2">Email: {profile?.email}</p>
+                <p className="font-semibold p-2">
+                  Contact: {profile?.phoneNumber.slice(0, -5) + "XXXXX"}
+                </p>
+                <p className="font-semibold p-2">
+                  Post code: {profile?.postCode}
+                </p>
+                <p className="font-semibold p-2">Address: {profile?.address}</p>
+              </div>
+              <div className="self-start">
+                <img
+                  src={profile?.avatarUrl}
+                  alt={profile?.fullName}
+                  className="h-24 rounded-full opacity-80 drop-shadow-xl"
+                />
+              </div>
+            </>
+          ) : (
+            <div className="flex items-center text-center justify-center">
+              <p className="text-red-500 font-semibold p-5 text-center">
+                {error.message} 😢
+              </p>
+            </div>
+          )}
         </div>
         <div className="bg-stone-100 mt-2 sm:mt-3 grid grid-cols-3 text-center sm:flex justify-between items-center p-4 sm:my-1 border border-r-2 border-stone-300 shadow-lg">
           <SocialLink profileUrl={profile?.github} linkText="Github">
