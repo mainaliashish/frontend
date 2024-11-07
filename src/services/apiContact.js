@@ -14,6 +14,6 @@ export async function postContactForm({ name, mobile, email, message }) {
     return data.results;
   } catch (error) {
     console.error("Failed to send message:", error);
-    return {};
+    throw new Error("Something went wrong. Please try again later.");
   }
 }

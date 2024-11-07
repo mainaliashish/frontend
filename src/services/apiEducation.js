@@ -10,6 +10,6 @@ export async function getEducationDetails(userId) {
     return data.results.reverse();
   } catch (error) {
     console.error("Failed to fetch education data:", error);
-    return {};
+    throw new Error("Something went wrong. Please try again later.");
   }
 }

@@ -1,6 +1,6 @@
 {
   "api": {
-    "awsBase": "https://qyywz1gpta.execute-api.us-east-1.amazonaws.com/",
+    "awsBase": "https://hhffyfnen1.execute-api.us-east-1.amazonaws.com/",
     "awsStage": "alpha/",
     "domainBase": "",
     "webDomain": "",

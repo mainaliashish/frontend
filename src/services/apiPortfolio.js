@@ -10,6 +10,6 @@ export async function getPortfolioDetails(userId) {
     return data;
   } catch (error) {
     console.error("Failed to fetch portfolio data:", error);
-    return {};
+    throw new Error("Something went wrong. Please try again later.");
   }
 }

@@ -10,6 +10,6 @@ export async function getExtraDetails(userId) {
     return data.results.at(0);
   } catch (error) {
     console.error("Failed to fetch extra info data:", error);
-    return {};
+    throw new Error("Something went wrong. Please try again later.");
   }
 }

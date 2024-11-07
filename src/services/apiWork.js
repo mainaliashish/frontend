@@ -10,6 +10,6 @@ export async function getWorkDetails(userId) {
     return data.results.reverse();
   } catch (error) {
     console.error("Failed to fetch work data:", error);
-    return {};
+    throw new Error("Something went wrong. Please try again later.");
   }
 }
